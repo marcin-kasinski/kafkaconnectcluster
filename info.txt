@@ -1,0 +1,1 @@
+sudo docker kill kafkaconnectcluster |true && sudo docker rm kafkaconnectcluster && sudo docker build -t kafkaconnectcluster . && sudo docker tag kafkaconnectcluster marcinkasinski/kafkaconnectcluster && sudo docker run --name kafkaconnectcluster kafkaconnectcluster
