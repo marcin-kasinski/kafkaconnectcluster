@@ -21,9 +21,12 @@ RUN mkdir /usr/src/myapp && mkdir /opt/jmx_prometheus_javaagent
 ADD jmx_prometheus_javaagent/jmx_prometheus_javaagent_kafka.yaml /opt/jmx_prometheus_javaagent/jmx_prometheus_javaagent_kafka.yaml
 
 ADD libs.sh /usr/src/myapp/libs.sh
-RUN sed -i -e 's/\r//g' /usr/src/myapp/libs.sh
 ADD start.sh /usr/src/myapp/start.sh
-RUN sed -i -e 's/\r//g' /usr/src/myapp/start.sh
+ADD worker.properties /usr/src/myapp/worker.properties
+
+RUN sed -i -e 's/\r//g' /usr/src/myapp/libs.sh && \
+    sed -i -e 's/\r//g' /usr/src/myapp/start.sh && \
+    sed -i -e 's/\r//g' /usr/src/myapp/worker.properties
 
 RUN echo ${KAFKA_MIRROR}${KAFKA_VERSION}.tgz && curl -o /opt/${KAFKA_VERSION}.tgz ${KAFKA_MIRROR}${KAFKA_VERSION}.tgz && \
 	tar -zxf /opt/${KAFKA_VERSION}.tgz -C /opt && \

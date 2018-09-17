@@ -22,4 +22,4 @@ echo "Configuration"
 cat $CONFIG
 
 #sleep 300000
-/opt/kafka/bin/connect-distributed.sh worker.properties
+/opt/kafka/bin/connect-distributed.sh /usr/src/myapp/worker.properties
