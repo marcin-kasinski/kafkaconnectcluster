@@ -9,7 +9,7 @@ ENV KAFKA_MIRROR=http://ftp.man.poznan.pl/apache/kafka/2.0.0/ \
 	KAFKA_VERSION=kafka_2.12-2.0.0 \
 	ZOOKEEPER_CONNECT="mainserver:2181" \
 	BROKER_NODES="1=mainserver.sdssd.sdsd.d;2=mainserver2" \
-	CONFIG="/opt/kafka/config/server.properties" \
+	CONFIG="/usr/src/myapp/worker.properties" \
 	PROMETHEUS_JMX_AGENT_MIRROR="https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/" \
 	PROMETHEUS_JMX_AGENT_VERSION="0.3.1" \
 	PROMETHEUS_JMX_AGENT_PORT="8080"

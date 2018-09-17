@@ -15,11 +15,11 @@ echo "advertised.host.name=$HOSTNAME" >> "$CONFIG"
 echo "zookeeper.connect=$ZOOKEEPER_CONNECT" >> "$CONFIG"
 
 
-processBROKER_NODES
+#processBROKER_NODES
 process_param_config
 
 echo "Configuration"
 cat $CONFIG
 
 #sleep 300000
-/opt/kafka/bin/connect-distributed.sh /usr/src/myapp/worker.properties
+/opt/kafka/bin/connect-distributed.sh $CONFIG
