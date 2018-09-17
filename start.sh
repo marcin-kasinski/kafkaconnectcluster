@@ -7,7 +7,7 @@ ls -l /usr/src/myapp/
 
 
 cp $CONFIG $CONFIG.OLD
-echo "" >$CONFIG
+#echo "" >$CONFIG
 
 HOSTNAME=`hostname -f`
 
