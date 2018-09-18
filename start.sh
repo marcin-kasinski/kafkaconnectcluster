@@ -11,9 +11,8 @@ cp $CONFIG $CONFIG.OLD
 
 HOSTNAME=`hostname -f`
 
-echo "advertised.host.name=$HOSTNAME" >> "$CONFIG"
-echo "zookeeper.connect=$ZOOKEEPER_CONNECT" >> "$CONFIG"
-
+#echo "advertised.host.name=$HOSTNAME" >> "$CONFIG"
+#echo "zookeeper.connect=$ZOOKEEPER_CONNECT" >> "$CONFIG"
 
 #processBROKER_NODES
 process_param_config
