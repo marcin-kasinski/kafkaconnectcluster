@@ -21,4 +21,7 @@ echo "Configuration"
 cat $CONFIG
 
 #sleep 300000
+
+cat $CONFIG
+
 /opt/kafka/bin/connect-distributed.sh $CONFIG
