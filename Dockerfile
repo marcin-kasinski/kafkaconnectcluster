@@ -20,6 +20,9 @@ RUN mkdir /usr/src/myapp && mkdir /opt/jmx_prometheus_javaagent
 
 ADD jmx_prometheus_javaagent/jmx_prometheus_javaagent_kafka.yaml /opt/jmx_prometheus_javaagent/jmx_prometheus_javaagent_kafka.yaml
 
+
+ADD connectors /usr/src/myapp/connectors
+
 ADD libs.sh /usr/src/myapp/libs.sh
 ADD start.sh /usr/src/myapp/start.sh
 ADD worker.properties /usr/src/myapp/worker.properties
