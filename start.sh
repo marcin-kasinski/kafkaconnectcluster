@@ -27,4 +27,7 @@ process_param_config
 apt update 
 apt install -y libmysql-java jq
 
+
+cp /usr/share/java/mysql-connector-java.jar /usr/src/myapp/connectors/kafka-connect-jdbc/
+
 /opt/kafka/bin/connect-distributed.sh $CONFIG
