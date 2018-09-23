@@ -17,11 +17,14 @@ HOSTNAME=`hostname -f`
 #processBROKER_NODES
 process_param_config
 
-echo "Configuration"
-cat $CONFIG
+#echo "Configuration"
+#cat $CONFIG
 
 #sleep 300000
 
-cat $CONFIG
+#cat $CONFIG
+
+apt update 
+apt install -y libmysql-java jq
 
 /opt/kafka/bin/connect-distributed.sh $CONFIG
